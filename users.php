@@ -9,10 +9,11 @@
     public $username;
     public $password;
 
-    public function __construct($_nome, $_cognome, $_email, $_username, $_password)
+    public function __construct($_nome, $_cognome, $_annoNascita, $_email, $_username, $_password)
     {
       $this->setNome($_nome);
       $this->setCognome($_cognome);
+      $this->setAnnoNascita($_annoNascita);
       $this->setEmail($_email);
       $this->setUsername($_username);
       $this->setPassword($_password);
@@ -35,10 +36,14 @@
     }
 
     public function setAnnoNascita($annoNascita) {
-      $this->annoNascita = $annoNascita;
+      if (!empty($annoNascita)) {
+        $this->annoNascita = $annoNascita;
+      } else {
+        die('L\'anno di nascita non può essere vuoto');
+      }
     }
 
-    public function setNome($email) {
+    public function setEmail($email) {
       if (!empty($email)) {
         $this->email = $email;
       } else {
@@ -46,7 +51,7 @@
       }
     }
 
-    public function setNome($username) {
+    public function setUsername($username) {
       if (!empty($username)) {
         $this->username = $username;
       } else {
@@ -54,7 +59,7 @@
       }
     }
 
-    public function setNome($password) {
+    public function setPassword($password) {
       if (!empty($password)) {
         $this->password = $password;
       } else {
@@ -63,7 +68,7 @@
     }
 
     public function getDati() {
-      return $this->nome . ' ' . $this->cognome . ' ' . $this->annoNascita . ' ' . $this->email . ' ' . $this->username . ' ' . $this->password;
+      return 'Nome : ' . $this->nome . ' ' . 'Cognome : ' . $this->cognome . ' ' . 'Anno di nascita : ' . $this->annoNascita . ' ' . 'Email : ' . $this->email . ' ' . 'Username : ' . $this->username . ' ' . 'Password : ' . $this->password;
     }
   }
 

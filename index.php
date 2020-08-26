@@ -1,6 +1,6 @@
 <?php
 
-  // require_once(__DIR__ . 'users.php');
+  require_once(__DIR__ . '/users.php');
 
   $users = [
     [
@@ -14,7 +14,7 @@
     [
       'nome' => 'Pippo',
       'cognome' => 'Verdi',
-      'annoNascita' => '',
+      'annoNascita' => 1920,
       'email' => 'Pippo@email.it',
       'username' => 'PippoPippo',
       'password' => 'CiaoPippo'
@@ -30,7 +30,7 @@
     [
       'nome' => 'Topolino',
       'cognome' => 'Disney',
-      'annoNascita' => '',
+      'annoNascita' => 1898,
       'email' => 'Topo@email.us',
       'username' => 'LinoTopo',
       'password' => 'MickeyMouse'
@@ -39,8 +39,7 @@
 
   foreach ($users as $user) {
     $utente = new User($user['nome'], $user['cognome'], $user['annoNascita'], $user['email'], $user['username'], $user['password']);
-    // echo ('Utente : ' . $utente->getDati() . '<br>');
-    var_dump($utente);
+    echo ('Utente : ' . '<br>' . $utente->getDati() . '<br>');
   }
 
 ?>
