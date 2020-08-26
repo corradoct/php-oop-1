@@ -5,9 +5,7 @@ Colonne:
 Id - num - INT - PRIM KEY
 Nome - str - VARCHAR(80) - NOTNULL
 Cognome - str - VARCHAR(80) - NOTNULL
-Anno_nascita - num - INT - NOTNULL
+Anno_nascita - num - INT
 Email - str - VARCHAR(80) - NOTNULL
 Username - str - VARCHAR(80) - NOTNULL
 Password - str - VARCHAR(80) - NOTNULL
-Tipo_abbonamento - str - VARCHAR(80)
-Modalita_pagamento - str - VARCHAR(80)
